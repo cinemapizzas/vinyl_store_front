@@ -6,7 +6,7 @@ import "./VinylInfo.css";
 function VinylInfo() {
   const { id } = useParams(); 
   const [vinyl, setVinyl] = useState(null);
-  const navigate = useNavigate(); // hook to navigate between pages
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     axios.get(`http://localhost:3000/vinyl/${id}`)
@@ -19,10 +19,10 @@ function VinylInfo() {
   return (
     <div className="vinyl-info-container">
       <button
-        onClick={() => navigate('/')} // navigate to the main page
+        onClick={() => navigate('/')}
         className="back-button"
       >
-        &times; {/* "X" symbol */}
+        &times; 
       </button>
       <h1>{vinyl.albumName}</h1>
       <img src={vinyl.imageUrl} alt="Vinyl Cover" className="vinyl-info-image" />

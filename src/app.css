@@ -1,28 +1,93 @@
 /* app.css */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 24px;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+.app-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.main-content {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: #333;
+  position: relative;
+}
+
+.vertical-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.vertical-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.album-section {
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 32px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.album-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.album-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
   }
-  
-  .album-section {
-    border: 2px solid #d1d5db;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    min-height: 300px;
-    background-color: white;
-    transition: transform 0.2s ease-in-out;
+
+  .main-content {
+    width: 90%;
   }
-  
-  .album-section:hover {
-    transform: translateY(-5px);
+
+  .vertical-line {
+    display: none;
   }
-  
-  .album-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: right;
-    margin-bottom: 16px;
-  }
-  
+}

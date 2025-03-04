@@ -1,21 +1,39 @@
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header/header';
-import DisplayVinyl from './vinyls/displayVinyls'
+import DisplayVinyl from './vinyls/mainPageComponents/displayVinyls';
 import VinylInfo from './vinyls/vinylInfo';
-import './app.css'
+import AllAlbums from './vinyls/all_vinyls/allVinyls';
+import Register from './Header/logIn/register/registaer'; 
+import Login from './Header/logIn/login/login.jsx';
+import './app.css';
+import TopSelling from './vinyls/mainPageComponents/topSelling';
 
 export function App() {
+  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
+
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      setLoggedIn(true);
+    }
+  }, []);
+
   return (
     <Router>
-      <Header />
-      <div className="container mx-auto p-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="border-2 border-gray-300 rounded-xl p-4 shadow-lg">
+      <div className="app-container">
+        <Header setLoggedIn={setLoggedIn} loggedIn={loggedIn} /> {}
+        <div className="content-container">
+          <div className="vertical-line left"></div>
+          <main className="main-content">
             <Routes>
-              <Route path="/" element={<DisplayVinyl />} />
+              <Route path="/" element={<><DisplayVinyl /><TopSelling /></>} /> 
               <Route path="/vinyl/:id" element={<VinylInfo />} />
+              <Route path="/vinyls" element={<AllAlbums />} />
+              <Route path="/register" element={<Register setLoggedIn={setLoggedIn} />} /> {}
+              <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} /> {}
             </Routes>
-          </div>
+          </main>
+          <div className="vertical-line right"></div>
         </div>
       </div>
     </Router>

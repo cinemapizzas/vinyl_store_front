@@ -1,0 +1,32 @@
+.vinyl-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .vinyl-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gold-rank {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .silver-rank {
+    background: linear-gradient(135deg, #C0C0C0, #B0B0B0);
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .bronze-rank {
+    background: linear-gradient(135deg, #CD7F32, #B87333);
+    color: #333;
+    font-weight: bold;
+  }
+  

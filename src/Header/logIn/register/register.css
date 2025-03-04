@@ -1,0 +1,116 @@
+body {
+    background-color: #f4f1de;
+    font-family: 'Roboto Mono', monospace;
+    color: #2c2c2c;
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #e07a5f;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    text-align: center;
+    color: #3d405b;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #3d405b;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3d405b;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #f2cc8f;
+}
+
+input:focus {
+    outline: none;
+    border-color: #81b29a;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #81b29a;
+    color: #3d405b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3d405b;
+    color: #f4f1de;
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #e63946;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success {
+    color: #2a9d8f;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .register-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.register-container {
+    width: 60vw; 
+    padding: 30px;
+    background-color: #e07a5f;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+

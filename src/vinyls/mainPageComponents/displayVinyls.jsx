@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './VinylItem.css'; 
+import '../vinylitem.css'; 
 
 function GetVinyls() {
   const [vinyls, setVinyls] = useState([]);
@@ -9,7 +9,7 @@ function GetVinyls() {
     axios.get('http://localhost:3000/vinyl')
       .then(response => {
         console.log('Vinyl List:', response.data);
-        setVinyls(response.data.slice(0, 4));  // Limit to 4 vinyls
+        setVinyls(response.data.slice(0, 4));  
       })
       .catch(error => {
         console.error('Error fetching vinyls:', error);

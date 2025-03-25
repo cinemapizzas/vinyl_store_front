@@ -1,0 +1,113 @@
+
+.vinyl-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f4f1de;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vinyl-list-container .vinyl-table {
+    border: 1px solid #81b29a;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.vinyl-list-container .vinyl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.vinyl-list-container .vinyl-row:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.03); 
+    position: relative;
+    z-index: 1; 
+}
+
+.vinyl-list-container .vinyl-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vinyl-list-container .album-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d405b;
+}
+
+.vinyl-list-container .delete-button {
+    background-color: #e07a5f;
+    width: 50px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.vinyl-list-container .delete-button:hover {
+    transform: scale(1.1);
+    background-color: #d66853;
+}
+
+.vinyl-list-container .delete-icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.vinyl-list-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3d405b;
+}
+
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.vinyl-list-container .vinyl-row:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255,0,0,0.2), rgba(255,165,0,0.2), rgba(255,255,0,0.2), rgba(0,255,0,0.2), rgba(0,0,255,0.2), rgba(75,0,130,0.2), rgba(148,0,211,0.2));
+    background-size: 400% 400%;
+    border-radius: 8px;
+    z-index: -1; 
+    animation: rainbow 5s linear infinite;
+    transition: opacity 0.3s ease; 
+    opacity: 1;
+}
+
+.vinyl-list-container .vinyl-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}

@@ -48,13 +48,13 @@ const Register = ({ setLoggedIn }) => {
           password: formData.password
         });
 
-        // Set the token and user in localStorage after successful registration
-        localStorage.setItem('token', response.data.token); // Assuming the response includes a token
-        localStorage.setItem('user', JSON.stringify(response.data.user)); // Assuming the response includes user data
+        
+        localStorage.setItem('token', response.data.token); 
+        localStorage.setItem('user', JSON.stringify(response.data.user));
 
         setSuccessMessage('Registration successful! Redirecting...');
         setTimeout(() => {
-          setLoggedIn(true); // Set loggedIn to true after registration
+          setLoggedIn(true); 
           navigate('/');
         }, 2000);
       } catch (error) {

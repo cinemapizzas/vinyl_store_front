@@ -1,0 +1,93 @@
+/* EditVinyl Component-Specific Styles */
+.edit-vinyl-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the container */
+    background-color: #f4f1de; /* Consistent background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .edit-vinyl-container .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #81b29a; /* Consistent border color */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff; /* White background for input */
+    color: #3d405b; /* Text color */
+  }
+  
+  .edit-vinyl-container .vinyl-table {
+    border: 1px solid #81b29a; /* Consistent border color */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff; /* White background for the table */
+  }
+  
+  .edit-vinyl-container .vinyl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .edit-vinyl-container .vinyl-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+  }
+  
+  .edit-vinyl-container .edit-fields {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .edit-vinyl-container .edit-fields input {
+    padding: 8px;
+    border: 1px solid #81b29a; /* Consistent border color */
+    border-radius: 4px;
+    min-width: 120px;
+    background-color: #fff; /* White background for inputs */
+    color: #3d405b; /* Text color */
+  }
+  
+  .edit-vinyl-container .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-vinyl-container .save-button,
+  .edit-vinyl-container .cancel-button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: #fff; /* White text */
+  }
+  
+  .edit-vinyl-container .save-button {
+    background-color: #4CAF50;
+  }
+  
+  .edit-vinyl-container .cancel-button {
+    background-color: #ff4444;
+  }
+  
+  .edit-vinyl-container .save-button:hover,
+  .edit-vinyl-container .cancel-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .edit-vinyl-container .check-icon,
+  .edit-vinyl-container .cancel-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+  

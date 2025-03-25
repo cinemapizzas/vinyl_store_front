@@ -1,0 +1,71 @@
+
+.add-vinyl-container {
+    width: 500px;
+    padding: 40px;
+    background-color: #f4f1de; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 20px auto;
+}
+
+.add-vinyl-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #3d405b; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-vinyl-container div {
+    margin-bottom: 20px;
+}
+
+.add-vinyl-container label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #3d405b; 
+}
+
+.add-vinyl-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #81b29a;
+    background-color: #fff; 
+    color: #3d405b; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.add-vinyl-container input:focus {
+    outline: none;
+    border-color: #e07a5f; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-vinyl-container button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #e07a5f; 
+    color: #fff; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-vinyl-container button:hover {
+    background-color: #d66853; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-vinyl-container .error-message {
+    color: #e63946;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+}
